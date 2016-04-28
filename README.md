@@ -1,27 +1,49 @@
 # quartz-menu
-You know what I hate? jQuery menu plugins that want you to include their styles, and all their dependencies, their entire kitchen sink and ...... etc.
+You know what I hate? jQuery menu plugins that want you to include their styles, all their dependencies, their entire kitchen sink and ...... etc.
 
-I've created a bare bones version of the menu on www.qz.com
+For realz. When I'm incorporating a 3rd party nav menu into my site, I really don't want all the baggage that comes with it.
 
-Bare bones, as in, it includes the sliding/toggling/responsive functionality and the minimum CSS required to make it work. And that's it.
+Here we have a bare bones version of the menu on www.qz.com
 
-It does require jQuery though ```1.1.2```.
+Bare bones, as in, it includes the sliding/toggling/responsive functionality and the minimum CSS required to make it work. And that's it. It does require jQuery though ```1.1.2```.
 
-I've also linked a styled version in /example.
+It's available under the ```jQuery``` plugin namespace ```qz```.
 
-# example
+## Examples
 
-HTML
+BUT styling is nice. And can help you figure out how to best style your header, so here's an example  (available in ```/src/example```):
+
+```
+www.plnkr.co/xxx
+```
+
+Naked example, available in ```/src/boilerplate```
+
+```
+www.plnkr.co/xxx
+```
+
+I would probably suggest picking and choosing what you like from the example and adding it to the boilerplate.
+
+
+# Minimum required markup
+
+Fire the ```jQuery plugin``` on a div that wraps ```header``` and ```nav```. i.e.
+
+```
+$('#qz').qz();
+```
+
+HTML: 
+
+
 ````
 <div id="qz">
 	<header id="qzHeader" class="transparent">
 		<!-- OPTINONAL Lefthand content -->
 		<div class="menu-container menu-left">
-			<a class="header-btn">
-				Text
-			</a>
-			<a class="header-btn">
-				Icon
+			<a class="icon-btn header-btn">
+				Item
 			</a>
 		</div>
 		<!-- OPTINONAL Logo -->
@@ -33,48 +55,54 @@ HTML
 		<!-- REQUIRED Righthand content -->
 		<div class="menu-container menu-right">
 			<!-- REQUIRED Main collapsable button -->
+			<a class="header-btn">
+				Archive
+			</a>
 			<button id="qzBtn" class="header-btn">
-				<svg width="16" height="4">
+				<svg width="16" height="6">
 				  <circle cx="2" cy="2" r="2"></circle>
 				  <circle cx="8" cy="2" r="2"></circle>
 				  <circle cx="14" cy="2" r="2"></circle>
 				</svg>
 			</button>
-		<!-- OPTINONAL Button -->
-			<a class="header-btn">
-				Icon
-			</a>
 		</div>
 	</header>
-	<figure id="qzDimmer"></figure>
-	<nav id="qzNav">
-		<div class="nagivation-row">
+	<figure id="qzDimmer" class="dimmer"></figure>
+	<nav id="qzNav" class="navBox">
+		<div class="navBoxRow">
 			<a href="#">
-				el
+				item
 			</a>
 			<a href="#">
-				el
-			</a>
-			<a href="#">
-				el
-			</a>
-			<a href="#">
-				el
+				item
 			</a>
 		</div>
 	</nav>
 </div>
 ````
 
-Overridable defaults:
+# Options
+
+i.e. ```$('#qz').qz({transparentOnTop: false});```
+
+Defaults are overridable:
+
 
 ````
-transparentOnTop: true,
-transparencyThreshold: 200,
-delta: 5,
-animate: true,
-enableDimmer: true,
-qzNav: 'qzNav',
-qzBtn: 'qzBtn',
+// Remove this class from HTML if you don't wan't transparency toggle.
+transparentOnTop: true
+
+// Number of pixels before transparent header becomes opaque.
+transparencyThreshold: 200
+
+// Amount of Y direction scroll before scrolling listeners kick in.  
+delta: 5
+
+// Dimmer
+enableDimmer: true
+
+// Div id's which the plugin will use to find elements to fire actions on. Feel free to override these.
+qzNav: 'qzNav'
+qzBtn: 'qzBtn'
 qzHeader: 'qzHeader'
 ````

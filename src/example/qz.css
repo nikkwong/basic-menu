@@ -1,0 +1,355 @@
+/* Global menu styles - Delete and keep what you like */
+
+div#qz > * {
+    font-family: 'Raleway';
+    font-size: 12px;
+    font-weight: 700;
+}
+
+a, span, p, button {
+    transition: color .25s ease-in-out;
+}
+
+a:hover span, a:hover p {
+    color: #505050;
+}
+
+/* Header Itmems */
+
+header {
+    height: 50px;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+     color: #888888; 
+    fill: #888888;
+    border-left-color: #E0E0E0;
+    border-right-color: #E0E0E0;
+    -o-transition: top .25s ease-in-out, background-color .25s ease-in-out;
+    -ms-transition: top .25s ease-in-out, background-color .25s ease-in-out;
+    -moz-transition: top .25s ease-in-out, background-color .25s ease-in-out;
+    -webkit-transition: top .25s ease-in-out, background-color .25s ease-in-out;
+    transition: top .25s ease-in-out, background-color .25s ease-in-out;
+}
+
+header:after {
+    clear: both;
+}
+
+header.hide {
+	top: -50px;
+}
+
+header .logo {
+    text-align: center;
+}
+
+/* Header Formatting */
+
+header .menu-container {
+    position: absolute;
+}
+
+header .menu-container > * {
+    float: left;
+}
+
+/* This should be inherited automatically but it's not. Chrome bug? */
+
+header .menu-left {
+    border-right-color: inherit;
+}
+
+header .menu-right {
+    right: 0;
+    top: 0;
+    border-left-color: inherit;
+}
+
+header .header-btn {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 16px;
+    margin: 0;
+    padding: 17px 20px;
+}
+
+/* Header button */
+
+header button.header-btn {
+    background: initial;
+    border: 0;
+}
+
+header button:focus {
+    outline:none;
+}
+
+header button svg {
+    fill: inherit;
+}
+
+/* Header icons */
+
+header .icon-btn {
+    font-size: 16px;
+    padding: 17px;
+}
+
+/* Header show */
+
+header.show .menu-left .header-btn {
+    border-right: 1px solid;
+    border-right-color: inherit;
+}
+
+header.show .menu-right .header-btn {
+    border-left: 1px solid;
+    border-left-color: inherit;
+}
+
+/* Header Transparent */
+
+header.transparent {
+    background-color: initial;
+    color: white;
+    fill: white;
+    border-left-color: white;
+}
+
+header.transparent .menu-container > .header-btn {
+    border-left: 0;
+    border-right: 0;
+    padding: 0px 20px;
+    margin: 17px 0;
+}
+
+header.transparent .menu-container > *:not(:first-child) {
+    border-left: 1px solid;
+    border-left-color: inherit;
+}
+
+
+/* Logo styling */
+
+.logo {
+    padding: 13px;
+}
+
+.logo > a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+/* Display for transition */
+
+.transitionDisplay {
+    z-index: 49!important;
+}
+
+/* Dimmer */
+
+figure.dimmer {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30,30,30,.7);
+    margin: 0;
+    opacity: 0;
+    transition: opacity .25s linear;
+}
+
+figure.dimmer.show {
+    opacity: 1;
+}
+
+/* Nav Box */
+
+nav.navBox {
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    top: 50px;
+    opacity: 0;
+    background: white;
+    max-width: 100%;
+    width: 300px;
+    padding: 20px 10px 10px 10px;
+    border: 1px solid #E0E0E0;
+    border-right: 0;
+    text-align: center;
+}
+
+nav .navBoxRow > a {    
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 0px 5px 15px 0;
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+    color: #888888;
+    text-align: center;
+}
+
+nav .navBoxRow > a > p {
+    margin: 0;
+}
+
+nav .navBoxRow > a > .icon {
+    font-size: 20px;
+}
+
+nav.navBox.show {
+    -webkit-animation: navBoxShow .4s;
+    -moz-animation: navBoxShow .4s;
+    -ms-animation: navBoxShow .4s;
+    -o-animation: navBoxShow .4s;
+    animation: navBoxShow .4s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+nav.navBox.hide {
+	    -webkit-animation: navBoxHide .4s;
+    -moz-animation: navBoxHide .4s;
+    -ms-animation: navBoxHide .4s;
+    -o-animation: navBoxHide .4s;
+    animation: navBoxHide .4s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes navBoxHide {
+	0% {
+	    -webkit-transform: translate3d(0,0,0);
+	    -moz-transform: translate3d(0,0,0);
+	    -ms-transform: translate3d(0,0,0);
+	    -o-transform: translate3d(0,0,0);
+	    transform: translate3d(0,0,0);
+	    opacity: 1;
+	}
+	99% {
+	    -webkit-transform: translate3d(100%,0,0);
+	    -moz-transform: translate3d(100%,0,0);
+	    -ms-transform: translate3d(100%,0,0);
+	    -o-transform: translate3d(100%,0,0);
+	    transform: translate3d(100%,0,0);
+	    opacity: 0;
+	}
+	100% {
+	    display: none;
+	}
+}
+@keyframes navBoxShow {
+	0% {
+	    display: none;
+	    -webkit-transform: translate3d(100%,0,0);
+	    -moz-transform: translate3d(100%,0,0);
+	    -ms-transform: translate3d(100%,0,0);
+	    -o-transform: translate3d(100%,0,0);
+	    transform: translate3d(100%,0,0);
+	    opacity: 0;
+	}
+	1% {
+	    display: block;
+	}
+	100% {
+	    -webkit-transform: translate3d(0,0,0);
+	    -moz-transform: translate3d(0,0,0);
+	    -ms-transform: translate3d(0,0,0);
+	    -o-transform: translate3d(0,0,0);
+	    transform: translate3d(0,0,0);
+	    opacity: 1;
+	}
+}
+
+/* Icons! */
+
+@font-face {
+    font-family: 'icomoon';
+    src:    url('./fonts/icomoon.eot?asvudb');
+    src:    url('./fonts/icomoon.eot?asvudb#iefix') format('embedded-opentype'),
+        url('./fonts/icomoon.ttf?asvudb') format('truetype'),
+        url('./fonts/icomoon.woff?asvudb') format('woff'),
+        url('./fonts/icomoon.svg?asvudb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-social-twitter:before {
+    content: "\e900";
+}
+.icon-social-facebook:before {
+    content: "\e901";
+}
+.icon-news:before {
+    content: "\e902";
+}
+.icon-home-outline:before {
+    content: "\e903";
+}
+.icon-rss-outline:before {
+    content: "\e904";
+}
+.icon-export-outline:before {
+    content: "\e905";
+}
+.icon-attachment-outline:before {
+    content: "\e906";
+}
+.icon-zoom-outline:before {
+    content: "\e907";
+}
+.icon-thumbs-up:before {
+    content: "\e908";
+}
+.icon-power-outline:before {
+    content: "\e909";
+}
+.icon-spanner-outline:before {
+    content: "\e90a";
+}
+.icon-printer:before {
+    content: "\e90b";
+}
+.icon-shopping-cart:before {
+    content: "\e90c";
+}
+
+/* Media Queries */
+
+@media all and (max-width: 400px) {
+    header .menu-right > a.header-btn {
+        display: none;
+    }
+
+    header.transparent .menu-container.menu-right .header-btn {
+        border-left: 0;
+    }
+}

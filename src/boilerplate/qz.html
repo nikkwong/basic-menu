@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script   src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
+		<script src="./../qz.js">
+		</script>
+		<link rel="stylesheet" href="./qz.css">
+	</head>
+	<body>
+		<div id="qz">
+			<header id="qzHeader" class="transparent">
+				<!-- OPTINONAL Lefthand content -->
+				<div class="menu-container menu-left">
+					<a class="icon-btn header-btn">
+						Item
+					</a>
+				</div>
+				<!-- OPTINONAL Logo -->
+				<div class="logo">
+					<a href="/" title="My page title" id="myLogo">
+						Logo
+					</a>
+				</div>
+				<!-- REQUIRED Righthand content -->
+				<div class="menu-container menu-right">
+					<!-- REQUIRED Main collapsable button -->
+					<a class="header-btn">
+						Archive
+					</a>
+					<button id="qzBtn" class="header-btn">
+						<svg width="16" height="6">
+						  <circle cx="2" cy="2" r="2"></circle>
+						  <circle cx="8" cy="2" r="2"></circle>
+						  <circle cx="14" cy="2" r="2"></circle>
+						</svg>
+					</button>
+				</div>
+			</header>
+			<figure id="qzDimmer" class="dimmer"></figure>
+			<nav id="qzNav" class="navBox">
+				<div class="navBoxRow">
+					<a href="#">
+						item
+					</a>
+					<a href="#">
+						item
+					</a>
+				</div>
+			</nav>
+		</div>
+	</body>
+	<script>
+		$('#qz').qz();
+	</script>
+</html>
