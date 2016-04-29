@@ -33,9 +33,9 @@ I would probably suggest picking and choosing what you like from the styled vers
 
 Fire the jQuery plugin ```.bm()``` on a div that wraps ```header``` and ```nav```. i.e.
 
-```
+````
 $('#bm').bm();
-```
+````
 
 HTML: 
 
