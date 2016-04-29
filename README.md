@@ -46,24 +46,19 @@ HTML:
 ````
 <div id="bm">
 	<header id="bmHeader" class="transparent">
-		<!-- OPTINONAL Lefthand content -->
+		<!-- optional -->
 		<div class="menu-container menu-left">
 			<a class="icon-btn header-btn">
 				Item
 			</a>
 		</div>
-		<!-- OPTINONAL Logo -->
+		<!-- optional -->
 		<div class="logo">
 			<a href="/" title="My page title" id="myLogo">
 				Logo
 			</a>
 		</div>
-		<!-- REQUIRED Righthand content -->
 		<div class="menu-container menu-right">
-			<!-- REQUIRED Main collapsable button -->
-			<a class="header-btn">
-				Archive
-			</a>
 			<button id="bmBtn" class="header-btn">
 				<svg width="16" height="6">
 				  <circle cx="2" cy="2" r="2"></circle>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BM Example</title>
+		<script   src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
+		<script src="./src/bm.js">
+		</script>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300,500' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="./src/styled/bm.css">
+	</head>
+	<body>
+		<div id="bm">
+			<header id="bmHeader" class="transparent">
+				<div class="menu-container menu-left">
+					<a class="icon-btn header-btn">
+						<span class="icon icon-social-twitter"></span>
+					</a>
+					<a class="icon-btn header-btn">
+						<span class="icon icon-social-facebook"></span>
+					</a>
+				</div>
+				<!-- OPTINONAL Logo -->
+				<div class="logo">
+					<a href="/" title="My page title" id="myLogo">
+						Logo
+					</a>
+				</div>
+				<!-- REQUIRED Righthand content -->
+				<div class="menu-container menu-right">
+					<!-- REQUIRED Main collapsable button -->
+					<a class="header-btn">
+						Archive
+					</a>
+					<button id="bmBtn" class="header-btn">
+						<svg width="16" height="6">
+						  <circle cx="2" cy="2" r="2"></circle>
+						  <circle cx="8" cy="2" r="2"></circle>
+						  <circle cx="14" cy="2" r="2"></circle>
+						</svg>
+					</button>
+				</div>
+			</header>
+			<figure id="bmDimmer" class="dimmer"></figure>
+			<nav id="bmNav" class="navBox">
+				<div class="navBoxRow">
+					<a href="#">
+						<span class="icon icon-home-outline"></span>
+						<p>Home</p>
+					</a>
+					<a href="#">
+						<span class="icon icon-shopping-cart"></span>
+						<p>Buy</p>
+					</a>
+					<a href="#">
+						<span class="icon icon-news"></span>
+						<p>Blog</p>
+					</a>
+					<a href="#">
+						<span class="icon icon-export-outline"></span>
+						<p>Share</p>
+					</a>
+				</div>
+				<div class="navBoxRow">
+					<a href="#">
+						<span class="icon icon-zoom-outline"></span>
+						<p>Search</p>
+					</a>
+					<a href="#">
+						<span class="icon icon-spanner-outline"></span>
+						<p>Settings</p>
+					</a>
+					<a href="#">
+						<span class="icon icon-power-outline"></span>
+						<p>Sign Out</p>
+					</a>
+				</div>
+			</nav>
+		</div>
+		<main>
+			<section>
+				<h1>This is a demo of a basic, extensible menu. It is super-de-duper lightweight and comes packaged with or without styles, so you can set it up how ever you'd like.</h1><br><br>
+				<a class="button" href="https://github.com/nikkwong/basic-menu">Open on Github</a>
+				<br><br><p>hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi</p>
+			</section>
+		</main>
+
+		<style>
+		body {
+			margin: 0;
+		}
+		main > section h1, main > section a {
+			font-family: 'Raleway';
+    		font-weight: 100;
+    		margin-top: 3em;
+		    border: 1px solid rgba(255,255,255,.25);
+		    padding: 1em;
+		}
+		main {
+		    background: linear-gradient(135deg, #D44242, #3D70CE);
+		    display: block;
+		}
+		main > section {
+		    position: relative;
+		    font-size: 30px;
+		    width: 10px;
+		    color: white;
+		    text-align: center;
+		    padding: 2em;
+		    width: 100%;
+		    box-sizing: border-box;
+		}
+		main > section > p {
+			opacity: 0;
+    		font-size: 54px;
+		}
+		a.button {
+		    background: #4A4843;
+		    padding: .5em;
+		    border-radius: 8px;
+		    color: white;
+		    font-weight: 400;
+		    text-decoration: none;
+		}
+		</style>
+	<script>
+		$('#bm').bm();
+	</script>
+	</body>
+</html>
