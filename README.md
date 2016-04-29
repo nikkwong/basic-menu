@@ -17,7 +17,7 @@ Only includes sliding/toggling/responsive functionality and the minimum CSS requ
 
 There are two versions.
 
-### basic menu styled
+### basic menu styled 
 
 available in ```/src/styled```
 
