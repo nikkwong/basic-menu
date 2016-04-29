@@ -3,7 +3,7 @@ You know what I hate? jQuery menu plugins that want you to include their styles,
 
 ## Demo
 
-```http://nikkwong.github.io/basic-menu/```
+http://nikkwong.github.io/basic-menu/
 
 ## Features
 
