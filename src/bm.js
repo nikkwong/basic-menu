@@ -1,19 +1,19 @@
 ;( function( $, window, document, undefined ) {
 
 	"use strict";
-		var pluginName = "qz",
+		var pluginName = "bm",
 			defaults = {
 				transparentOnTop: true,
 				transparencyThreshold: 200,
 				delta: 5,
 				enableDimmer: true,
-				qzDimmer: 'qzDimmer',
-				qzNav: 'qzNav',
-				qzBtn: 'qzBtn',
-				qzHeader: 'qzHeader'
+				bmDimmer: 'bmDimmer',
+				bmNav: 'bmNav',
+				bmBtn: 'bmBtn',
+				bmHeader: 'bmHeader'
 			};
 
-		function qz ( element, options ) {
+		function bm ( element, options ) {
 			this.scrollTimeout = null;
 			this.lastScrollTop = 0;
 			this.navActivated = false;
@@ -22,15 +22,15 @@
 			this.settings = $.extend( {}, defaults, options );
 			this._defaults = defaults;
 			this._name = pluginName;
-			this.$qzHeader = this.$el.find($('#' + this._defaults.qzHeader));
-			this.$qzBtn = this.$el.find($('#' + this._defaults.qzBtn));
-			this.$qzNav = this.$el.find($('#' + this._defaults.qzNav));
-			this.$qzDimmer = this.$el.find($('#' + this._defaults.qzDimmer));
-			this.navbarHeight = this.$qzNav.outerHeight();
+			this.$bmHeader = this.$el.find($('#' + this._defaults.bmHeader));
+			this.$bmBtn = this.$el.find($('#' + this._defaults.bmBtn));
+			this.$bmNav = this.$el.find($('#' + this._defaults.bmNav));
+			this.$bmDimmer = this.$el.find($('#' + this._defaults.bmDimmer));
+			this.navbarHeight = this.$bmNav.outerHeight();
 			this.init();
 		}
 
-		$.extend( qz.prototype, {
+		$.extend( bm.prototype, {
 			init: function() {
 				this.initListeners();
 			},
@@ -47,11 +47,11 @@
 				    this.scrollTimeout = setTimeout(this.scrollHandler.apply(this), 250);
 				}.bind(this));
 
-				this.$qzBtn.click(function(e) {
+				this.$bmBtn.click(function(e) {
 					this.toggleMenu();
 				}.bind(this));
 
-				this.$qzNav.on('webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend', 
+				this.$bmNav.on('webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend', 
 				    	function() {
 				    		// navBox is hidden?
 				    		if (!$(this).hasClass('show'))
@@ -61,7 +61,7 @@
 
 				// Wait for transition end to hide dimmer.
 				if (this._defaults.enableDimmer) {
-					this.$qzDimmer.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', 
+					this.$bmDimmer.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', 
 				    	function() {
 				    		// navBox is hidden?
 				    		if (!$(this).hasClass('show')) {
@@ -71,7 +71,7 @@
 						}
 				    );
 
-				    this.$qzDimmer.on('click', function () {
+				    this.$bmDimmer.on('click', function () {
 				    	_this.hideNav();
 				    })
 				}
@@ -83,12 +83,12 @@
 
 				var _this = this;
 
-				if (!_this.$qzNav.hasClass('show') && !_this.$qzNav.hasClass('hide')) {
+				if (!_this.$bmNav.hasClass('show') && !_this.$bmNav.hasClass('hide')) {
 					_this.showNav();
 					return;
 				}
 
-				_this.$qzNav.hasClass('show') ? _this.hideNav() : _this.showNav();
+				_this.$bmNav.hasClass('show') ? _this.hideNav() : _this.showNav();
 
 			},
 
@@ -128,50 +128,50 @@
 			// Convenience methods;
 
 			hideHeader: function () {
-			    this.$qzHeader.removeClass('show');
-			    this.$qzHeader.addClass('hide');
+			    this.$bmHeader.removeClass('show');
+			    this.$bmHeader.addClass('hide');
 			},
 
 			showHeader: function () {
-			    this.$qzHeader.removeClass('hide');
-			    this.$qzHeader.addClass('show');
+			    this.$bmHeader.removeClass('hide');
+			    this.$bmHeader.addClass('show');
 			},
 
 			hideHeaderTransparency: function () {
-				if (this.$qzHeader.hasClass('transparent'))
-					this.$qzHeader.removeClass('transparent');
+				if (this.$bmHeader.hasClass('transparent'))
+					this.$bmHeader.removeClass('transparent');
 			},
 
 			hideNav: function () {
-				this.$qzNav.removeClass('show');
-				this.$qzNav.addClass('hide');
+				this.$bmNav.removeClass('show');
+				this.$bmNav.addClass('hide');
 				this.hideDimmer();
 				this.navActivated = false;
 			},
 
 			showNav: function () {
-				this.$qzNav.removeClass('hide');
-				this.$qzNav.addClass('show');
-				this.$qzNav.addClass('transitionDisplay');
+				this.$bmNav.removeClass('hide');
+				this.$bmNav.addClass('show');
+				this.$bmNav.addClass('transitionDisplay');
 				this.showDimmer();
 				this.navActivated = true;
 			},
 
 			showHeaderTransparency: function () {
-				if (!this.$qzHeader.hasClass('transparent'))
-					this.$qzHeader.addClass('transparent');
+				if (!this.$bmHeader.hasClass('transparent'))
+					this.$bmHeader.addClass('transparent');
 			},
 
 			hideDimmer: function () {
 				if(this._defaults.enableDimmer)
-					this.$qzDimmer.removeClass('show');
+					this.$bmDimmer.removeClass('show');
 			},
 
 			showDimmer: function () {
 				if(this._defaults.enableDimmer)
-					this.$qzDimmer.removeClass('hide');
-					this.$qzDimmer.addClass('show');
-					this.$qzDimmer.addClass('transitionDisplay');
+					this.$bmDimmer.removeClass('hide');
+					this.$bmDimmer.addClass('show');
+					this.$bmDimmer.addClass('transitionDisplay');
 			}
 		});
 
@@ -179,7 +179,7 @@
 			return this.each( function() {
 				if ( !$.data( this, "plugin_" + pluginName ) ) {
 					$.data( this, "plugin_" +
-						pluginName, new qz( this, options ) );
+						pluginName, new bm( this, options ) );
 				}
 			} );
 		};

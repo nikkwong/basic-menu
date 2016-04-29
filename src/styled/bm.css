@@ -1,6 +1,6 @@
 /* Global menu styles - Delete and keep what you like */
 
-div#qz > * {
+div#bm > * {
     font-family: 'Raleway';
     font-size: 12px;
     font-weight: 700;
@@ -80,7 +80,7 @@ header .header-btn {
 /* Header button */
 
 header button.header-btn {
-    background: initial;
+    background: rgba(0,0,0,0);
     border: 0;
 }
 
@@ -114,7 +114,7 @@ header.show .menu-right .header-btn {
 /* Header Transparent */
 
 header.transparent {
-    background-color: initial;
+    background-color: rgba(0,0,0,0);
     color: white;
     fill: white;
     border-left-color: white;
