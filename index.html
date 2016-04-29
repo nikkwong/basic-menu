@@ -78,9 +78,11 @@
 		</div>
 		<main>
 			<section>
-				<h1>This is a demo of a basic, extensible menu. It is super-de-duper lightweight and comes packaged with or without styles, so you can set it up how ever you'd like.</h1><br><br>
+				<div>
+					<h1>This is a demo of a basic, extensible menu. It is super-de-duper lightweight and comes packaged with or without styles, so you can set it up how ever you'd like.</h1><br><br><h1>Click on the top right nav button.</h1><br><br>
 				<a class="button" href="https://github.com/nikkwong/basic-menu">Open on Github</a>
-				<br><br><p>hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi</p>
+				</div>
+				<br><br><article></article>
 			</section>
 		</main>
 
@@ -91,6 +93,8 @@
 		main > section h1, main > section a {
 			font-family: 'Raleway';
     		font-weight: 100;
+		}
+		main > section > div, main > section a {
     		margin-top: 3em;
 		    border: 1px solid rgba(255,255,255,.25);
 		    padding: 1em;
@@ -113,6 +117,9 @@
 			opacity: 0;
     		font-size: 54px;
 		}
+		article {
+		    height: 1500px;
+		}
 		a.button {
 		    background: #4A4843;
 		    padding: .5em;
@@ -120,6 +127,11 @@
 		    color: white;
 		    font-weight: 400;
 		    text-decoration: none;
+		}
+		@media all and (max-width 768px) {
+			h1 {
+			    font-size: 28px;
+			}
 		}
 		</style>
 	<script>

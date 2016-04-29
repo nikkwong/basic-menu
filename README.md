@@ -1,6 +1,10 @@
 # basic menu
 You know what I hate? jQuery menu plugins that want you to include their styles, all their dependencies, their entire kitchen sink and ...... etc. This menu doesn't do that. 
 
+## Demo
+
+```http://nikkwong.github.io/basic-menu/```
+
 ## Features
 
 Only includes sliding/toggling/responsive functionality and the minimum CSS required to make it work. And that's it. Bring your own styling.
@@ -17,17 +21,10 @@ There are two versions.
 
 available in ```/src/styled```
 
-```
-www.plnkr.co/xxx
-```
-
 ### basic menu boilerplate
 
 available in ```/src/boilerplate```
 
-```
-www.plnkr.co/xxx
-```
 
 I would probably suggest picking and choosing what you like from the styled version and adding it to the boilerplate.
 
