@@ -33,14 +33,14 @@ I would probably suggest picking and choosing what you like from the styled vers
 
 Fire the jQuery plugin ```.bm()``` on a div that wraps ```header``` and ```nav```. i.e.
 
-````
+````javascript
 $('#bm').bm();
 ````
 
 HTML: 
 
 
-````
+````html
 <div id="bm">
 	<header id="bmHeader" class="transparent">
 		<!-- optional -->
@@ -81,33 +81,36 @@ HTML:
 
 # Options
 
-i.e. ```$('#bm').bm({transparentOnTop: false});```
+i.e. 
+```javascript
+$('#bm').bm({transparentOnTop: false});
+```
 
 Defaults are overridable:
 
 
 // Remove this class from HTML if you don't wan't transparency toggle.
-````
+````javascript
 transparentOnTop: true
 ````
 
 // Number of pixels before transparent header becomes opaque.
-````
+````javascript
 transparencyThreshold: 200
 ````
 
 // Amount of Y direction scroll before scrolling listeners kick in.  
-````
+````javascript
 delta: 5
 ````
 
 // Dimmer
-````
+````javascript
 enableDimmer: true
 ````
 
 // Div id's which the plugin will use to find elements to fire actions on. Feel free to override these.
-````
+````javascript
 bmNav: 'bmNav'
 bmBtn: 'bmBtn'
 bmHeader: 'bmHeader'
